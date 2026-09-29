@@ -1,10 +1,7 @@
-# Windows batch files must keep CRLF endings. Git's default normalisation
-# would store LF and hand users a file that cmd.exe can mis-parse.
-*.cmd text eol=crlf
-*.bat text eol=crlf
-*.ps1 text eol=crlf
+# GitHub serves the raw blob from the repo, and "text" normalisation would
+# store run.cmd with LF endings. cmd.exe is not reliable with LF, so store
+# these byte-for-byte instead: -text disables all EOL conversion.
+*.cmd -text
+*.bat -text
 
-# Everything else stays as-is.
-*.md   text eol=lf
-*.html text eol=lf
-*.json text eol=lf
+*.ps1 -text
