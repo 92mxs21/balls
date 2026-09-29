@@ -1,0 +1,10 @@
+# Windows batch files must keep CRLF endings. Git's default normalisation
+# would store LF and hand users a file that cmd.exe can mis-parse.
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# Everything else stays as-is.
+*.md   text eol=lf
+*.html text eol=lf
+*.json text eol=lf
