@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>balls &mdash; Minecraft 26.3 Fabric mod installer</title>
+<style>
+  :root {
+    --bg: #14161a;
+    --panel: #1c1f26;
+    --line: #2b303a;
+    --text: #e6e8ec;
+    --muted: #9aa3b2;
+    --accent: #5fc46b;
+    --accent-dim: #3d8a46;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    padding: 24px;
+  }
+  .card {
+    width: 100%;
+    max-width: 620px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 36px;
+  }
+  h1 { margin: 0 0 4px; font-size: 1.9rem; letter-spacing: -0.02em; }
+  .sub { margin: 0 0 28px; color: var(--muted); }
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #10240f;
+    font-size: 1.05rem;
+    font-weight: 650;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .15s ease, transform .05s ease;
+  }
+  .btn:hover  { background: #6fd47b; }
+  .btn:active { transform: translateY(1px); }
+  .btn small  { display: block; font-weight: 500; font-size: .82rem; opacity: .75; margin-top: 3px; }
+  .note {
+    margin-top: 22px;
+    padding: 16px 18px;
+    background: #16181d;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent-dim);
+    border-radius: 8px;
+    font-size: .9rem;
+    color: var(--muted);
+  }
+  .note b { color: var(--text); font-weight: 600; }
+  ol { margin: 18px 0 0; padding-left: 20px; color: var(--muted); font-size: .93rem; }
+  ol li { margin-bottom: 7px; }
+  ol li b { color: var(--text); font-weight: 600; }
+  code {
+    background: #101216;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-size: .88em;
+    color: var(--text);
+  }
+  footer { margin-top: 26px; font-size: .8rem; color: #6b7480; text-align: center; }
+  footer a { color: #6b7480; }
+</style>
+</head>
+<body>
+  <main class="card">
+    <h1>balls</h1>
+    <p class="sub">Fabric + mod setup for Minecraft 26.3, in one file.</p>
+
+    <!--
+      Replace this href with your own raw URL after publishing, e.g.
+      https://raw.githubusercontent.com/<you>/balls/main/run.cmd
+    -->
+    <a class="btn" href="https://raw.githubusercontent.com/DeutscherCOder/balls/main/run.cmd" download="run.cmd">
+      Download run.cmd
+      <small>keep it next to install-mods.ps1 and mods.json</small>
+    </a>
+
+    <div class="note">
+      <b>Windows may warn you.</b> SmartScreen flags anything downloaded as a
+      file rather than a known app. Choose <b>More info &rarr; Run anyway</b>.
+      This is a plain, readable batch file &mdash; open it and check.
+    </div>
+
+    <ol>
+      <li>Put <code>run.cmd</code>, <code>install-mods.ps1</code> and <code>mods.json</code> in the same folder.</li>
+      <li>Double-click <code>run.cmd</code>.</li>
+      <li>It finds your Fabric profile (installing one if it is missing) and pulls Sodium, Fabric API, Lithium, FerriteCore and friends straight from the Modrinth API.</li>
+      <li>Every download is checked against the SHA-512 Modrinth publishes.</li>
+      <li>Open the launcher, pick the <b>fabric-loader-26.3</b> profile, play.</li>
+    </ol>
+
+    <footer>
+      Not affiliated with Mojang, Microsoft, FabricMC or Modrinth.<br>
+      <a href="https://github.com/DeutscherCOder/balls">github.com/DeutscherCOder/balls</a>
+    </footer>
+  </main>
+</body>
+</html>

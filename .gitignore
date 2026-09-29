@@ -1,0 +1,8 @@
+# Fabric installer jar is fetched at run time into %TEMP%, never committed.
+*.jar
+*.exe
+
+# Local scratch
+*.log
+.DS_Store
+Thumbs.db
